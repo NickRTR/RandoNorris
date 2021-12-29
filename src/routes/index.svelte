@@ -8,12 +8,22 @@
         if (start >= end) {
             result = end;
         } else {
-            result = Math.floor(Math.random() * end) + start;
-            return result;
+            let randomNumber = Math.floor(Math.random() * end) + start;
+            console.log(randomNumber);
+            if (randomNumber <= end) {
+                result = randomNumber
+                return randomNumber;
+            } else {
+                generateRandom();
+            }
         }
     }
 
 </script>
+
+<svelte:head>
+    <title>Rando Norris</title>
+</svelte:head>
 
 <main class="bg-marine text-center min-h-screen text-xl">
     <h1 class="text-4xl sm:text-5xl font-semibold text-bee py-6">Rando Norris</h1>

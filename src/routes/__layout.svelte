@@ -1,4 +1,8 @@
-<body><slot></slot></body>
+<body>
+    <slot></slot>
+</body>
+
+
 
 <style>
     @tailwind base;

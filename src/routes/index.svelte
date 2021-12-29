@@ -9,7 +9,6 @@
             result = end;
         } else {
             let randomNumber = Math.floor(Math.random() * end) + start;
-            console.log(randomNumber);
             if (randomNumber <= end) {
                 result = randomNumber
                 return randomNumber;

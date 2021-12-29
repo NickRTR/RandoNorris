@@ -1,0 +1,18 @@
+{
+  "name": "randonorris",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "autoprefixer": "^10.4.0",
+    "svelte": "^3.44.0",
+    "tailwindcss": "^3.0.8"
+  },
+  "type": "module"
+}

@@ -21,7 +21,7 @@
     <h1 class="text-2xl sm:text-4xl mb-5 font-semibold text-bee">Random Number</h1>
     <div>
         <div class="text-5xl flex justify-center text-bee font-bold p-40 rounded-xl cursor-pointer" style="background-color: {result}" on:click={copyCode}>
-            <p class="my-auto pb-2 px-2 w-52 bg-marine rounded-xl">{result}</p>
+            <p class="my-auto pb-2 px-2 w-60 bg-marine rounded-xl">{result}</p>
         </div>
 
     </div>

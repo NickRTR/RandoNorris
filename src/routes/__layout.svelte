@@ -1,10 +1,21 @@
+<script>
+    import {page} from "$app/stores";
+
+    const nav = [
+        {title: "Number", path: "/"},
+        {title: "Color", path: "/randomcolor"},
+        {title: "Decision", path: "/randomdecision"},
+        {title: "Letter", path: "/randomletter"},
+    ];
+</script>
+
 <body class="bg-marine text-center min-h-screen text-xl">
-    <header class="bg-marine-bright flex px-2 sm:px-10 md:px-40 lg:px-60 py-4 mb-6">
+    <header class="bg-marine-bright flex sm:px-10 md:px-40 lg:px-60 py-4 mb-6">
         <h1 class="text-2xl sm:text-4xl mb-1 font-semibold text-bee">Rando Norris</h1>
         <div class="links text-marine ml-auto my-auto">
-            <a class="bg-bee rounded-full p-1.5" href="/">Number</a>
-            <a class="bg-bee rounded-full p-1.5" href="/randomcolor">Color</a>
-            <a class="bg-bee rounded-full p-1.5" href="/randomdecision">Decision</a>
+            {#each nav as item}
+                <a class:active={$page.path === item.path} class="rounded-full text-white border-2 border-bee p-1.5 ml-2" href={item.path}>{item.title}</a>    
+            {/each}
         </div>
     </header>
 
@@ -15,10 +26,13 @@
     </footer>
 </body>
 
-
-
 <style>
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
+
+    .active {
+        background-color: #F6C90E;
+        color: #303841;
+    }
 </style>

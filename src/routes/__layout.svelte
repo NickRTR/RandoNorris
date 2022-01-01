@@ -36,7 +36,7 @@
         </div>
         <div class="hamburger ml-auto lg:hidden">
             <img class="cursor-pointer mx-auto" src="/menu.svg" alt="menu" width="50px" style="color: white" on:click={toggleHamburger}>
-            <div class="absolute blur-none z-10 bg-marine-bright top-24 right-3 p-5 rounded-2xl {hamburger}">
+            <div class="absolute z-10 bg-marine-bright top-24 right-3 p-5 rounded-2xl {hamburger}">
                 {#each nav as item}
                     <div class="my-5"><a class:activeMobile={$page.path === item.path} class="text-white px-4 focus:outline-none focus:underline" href={item.path} on:click={toggleHamburger}>{item.title}</a></div>
                 {/each}

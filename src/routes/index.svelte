@@ -24,7 +24,7 @@
 </script>
 
 <svelte:head>
-    <title>Rando Norris</title>
+    <title>Random Number</title>
 </svelte:head>
 
 <div>

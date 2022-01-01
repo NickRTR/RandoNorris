@@ -9,12 +9,21 @@
     ];
 
     $: hamburger = "hidden";
+    $: blur = "blur-none";
+
+    $: console.log(blur);
 
     const toggleHamburger = () => {
         if (hamburger === "hidden") {
             hamburger = "block";
         } else {
             hamburger = "hidden";
+        }
+
+        if (blur === "blur-none") {
+            blur = "blur-lg";
+        } else {
+            blur = "blur-none"
         }
     }
 </script>
@@ -28,8 +37,8 @@
             {/each}
         </div>
         <div class="hamburger ml-auto lg:hidden">
-            <img class="cursor-pointer mx-auto" src="/menu.svg" alt="menu" width="40px" style="color: white" on:click={toggleHamburger}>
-            <div class="relative rounded-2xl mx-auto {hamburger}">
+            <img class="cursor-pointer mx-auto" src="/menu.svg" alt="menu" width="50px" style="color: white" on:click={toggleHamburger}>
+            <div class="absolute blur-none z-10 bg-marine-bright top-24 right-3 p-5 rounded-2xl {hamburger}">
                 {#each nav as item}
                     <div class="my-5"><a class:activeMobile={$page.path === item.path} class="text-white px-4 focus:outline-none focus:underline" href={item.path}>{item.title}</a></div>
                 {/each}
@@ -37,7 +46,7 @@
         </div>
     </header>
 
-    <div class="mx-5 mb-10 sm:mx-20 md:mx-40 lg:mx-60 xl:80"><slot></slot></div>
+    <div class="{blur} mx-5 mb-10 sm:mx-20 md:mx-40 lg:mx-60 xl:80"><slot></slot></div>
 
     <footer>
         <p class="text-white fixed bottom-0 py-1 w-full mx-auto bg-marine-bright">©2022 Nick Reutlinger</p>

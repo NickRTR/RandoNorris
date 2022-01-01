@@ -25,8 +25,8 @@
 
 <main class="text-bee">
     <Title title="Random Country"/>
-    <div class="result {bg} py-10 sm:mx-20 lg:mx-40 rounded-xl text-2xl text-center">
+    <div class="result {bg} py-10 px-2 sm:mx-20 lg:mx-40 rounded-xl text-2xl text-center">
         <p>{result}</p>
     </div>
-    <Button action={getRandomLetter}></Button>
+    <Button action={getRandomLetter} text="Randomize"></Button>
 </main>

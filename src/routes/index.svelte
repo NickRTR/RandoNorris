@@ -49,5 +49,5 @@
             </div>
         </form>
     </div>
-    <Button action={generateRandom}></Button>
+    <Button action={generateRandom} text="Randomize"></Button>
 </div>

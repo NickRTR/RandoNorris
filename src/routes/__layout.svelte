@@ -7,6 +7,7 @@
         {title: "Decision", path: "/generators/randomdecision"},
         {title: "Letter", path: "/generators/randomletter"},
         {title: "Country", path: "/generators/randomcountry"},
+        {title: "Reaction", path: "/generators/randomreaction"},
     ];
 
     $: hamburger = "hidden";

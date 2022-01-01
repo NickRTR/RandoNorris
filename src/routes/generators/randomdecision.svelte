@@ -30,5 +30,5 @@
     <div class="result {bg} py-5 sm:mx-20 lg:mx-40 rounded-xl text-6xl text-center">
         <img class="mx-auto" src="/decision/{result}.svg" alt="{result}" width="50%">
     </div>
-    <Button action={getDecision}></Button>
+    <Button action={getDecision} text="Randomize"></Button>
 </main>

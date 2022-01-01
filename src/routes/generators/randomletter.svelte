@@ -28,5 +28,5 @@
     <div class="result {bg} py-10 sm:mx-20 lg:mx-40 rounded-xl text-8xl text-center">
         <p>{result}</p>
     </div>
-    <Button action={getRandomLetter}></Button>
+    <Button action={getRandomLetter} text="Randomize"></Button>
 </main>

@@ -32,5 +32,5 @@
         </div>  
         <p class="mt-11 text-marine pb-1 font-semibold">Click to Copy</p>
     </div>
-    <Button action={generateRandom}></Button>
+    <Button action={generateRandom} text="Randomize"></Button>
 </div>

@@ -6,8 +6,13 @@
     let end = 10;
 
     $: result = generateRandom();
+    $: bg = "bg-marine-bright";
 
     const generateRandom = () => {
+        bg = "bg-green-400"
+        setTimeout(() => {
+            bg = "bg-marine-bright"
+        }, 250);
         if (start >= end) {
             result = end;
         } else {
@@ -30,7 +35,7 @@
 <div>
     <Title title="Random Number"/>
     <div>
-        <div class="text-5xl flex justify-center text-bee font-bold bg-marine-bright py-5 rounded-xl">
+        <div style="filter: url('#teal-lightgreen');" class="text-5xl flex justify-center text-bee font-bold {bg} py-5 rounded-xl">
             <p class="my-auto">{result}</p>
         </div>
         <form class="bg-marine-bright mt-5 p-5 rounded-xl text-marine font-semibold">

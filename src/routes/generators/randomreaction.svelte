@@ -5,8 +5,6 @@
     $: bg = "bg-marine-bright";
     $: duration = 0;
 
-    $: console.log(duration);
-
     var startTime = "";
     var delay = "";
 

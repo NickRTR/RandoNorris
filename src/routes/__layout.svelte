@@ -2,11 +2,11 @@
     import {page} from "$app/stores";
 
     const nav = [
-        {title: "Number", path: "/"},
-        {title: "Color", path: "/generators/randomcolor"},
         {title: "Decision", path: "/generators/randomdecision"},
+        {title: "Number", path: "/"},
         {title: "Letter", path: "/generators/randomletter"},
         {title: "Country", path: "/generators/randomcountry"},
+        {title: "Color", path: "/generators/randomcolor"},
         {title: "Reaction", path: "/generators/randomreaction"},
     ];
 
@@ -33,7 +33,7 @@
         <h1 class="text-3xl font-semibold text-bee my-auto">Rando Norris</h1>
         <div class="links text-marine ml-auto hidden lg:flex">
             {#each nav as item}
-                <a class:active={$page.path === item.path} class="rounded-full text-white border-2 border-bee p-1.5 ml-2 focus:bg-bee focus:text-marine focus:outline-none" href={item.path}>{item.title}</a>    
+                <a class:active={$page.path === item.path} class="rounded-full text-white border-2 border-bee p-1.5 ml-2 focus:bg-bee focus:text-marine focus:outline-none hover:bg-bee hover:text-marine hover:outline-none" href={item.path}>{item.title}</a>    
             {/each}
         </div>
         <div class="hamburger ml-auto lg:hidden">

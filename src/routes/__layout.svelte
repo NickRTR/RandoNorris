@@ -2,8 +2,8 @@
     import {page} from "$app/stores";
 
     const nav = [
-        {title: "Decision", path: "/generators/randomdecision"},
         {title: "Number", path: "/"},
+        {title: "Decision", path: "/generators/randomdecision"},
         {title: "Letter", path: "/generators/randomletter"},
         {title: "Country", path: "/generators/randomcountry"},
         {title: "Color", path: "/generators/randomcolor"},

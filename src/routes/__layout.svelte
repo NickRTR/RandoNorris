@@ -49,7 +49,7 @@
     <div class="{blur} mx-5 mb-10 sm:mx-20 md:mx-40 lg:mx-60 xl:80"><slot></slot></div>
 
     <footer>
-        <p class="text-white fixed bottom-0 py-1 w-full mx-auto bg-marine-bright">©2022 Nick Reutlinger</p>
+        <p class="text-white fixed bottom-0 py-1 w-full mx-auto bg-marine-bright">©2023 Nick Reutlinger</p>
     </footer>
 </body>
 

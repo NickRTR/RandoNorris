@@ -1,2 +1,20 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import { generator } from "$lib/stores";
+
+	import NumberGenerator from "$lib/components/generators/NumberGenerator.svelte";
+	import LetterGenerator from "$lib/components/generators/LetterGenerator.svelte";
+	import ColorGenerator from "$lib/components/generators/ColorGenerator.svelte";
+	import DecisionGenerator from "$lib/components/generators/DecisionGenerator.svelte";
+</script>
+
+<main>
+	{#if $generator === "number"}
+		<NumberGenerator />
+	{:else if $generator === "letter"}
+		<LetterGenerator />
+	{:else if $generator === "color"}
+		<ColorGenerator />
+	{:else if $generator === "decision"}
+		<DecisionGenerator />
+	{/if}
+</main>

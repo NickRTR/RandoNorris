@@ -36,7 +36,7 @@
 <style>
 	nav {
 		position: fixed;
-		bottom: 10px;
+		bottom: 25px;
 		left: 50%;
 		transform: translateX(-50%);
 		display: flex;

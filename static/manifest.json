@@ -9,6 +9,16 @@
 	"orientation": "portrait",
 	"icons": [
 		{
+			"src": "favicon.png",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "favicon.svg",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
 			"src": "icons/windows11/SmallTile.scale-100.png",
 			"sizes": "71x71"
 		},

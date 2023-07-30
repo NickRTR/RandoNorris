@@ -459,7 +459,7 @@
 	],
 	"description": "RandoNorris is a simple but functional randomizer app.",
 	"lang": "en",
-	"categories": ["utility", "productivity"],
+	"categories": ["utility", "games", "productivity"],
 	"dir": "auto",
 	"prefer_related_applications": false
 }

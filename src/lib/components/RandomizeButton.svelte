@@ -11,6 +11,7 @@
 
 	button {
 		touch-action: manipulation;
+		user-select: none;
 		background-color: red;
 		color: white;
 		border: none;

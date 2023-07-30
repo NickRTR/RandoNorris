@@ -1,9 +1,38 @@
 <script>
-	let result = "#FFC600";
+	import RandomizeButton from "../RandomizeButton.svelte";
+	import Result from "../Result.svelte";
+
+	let result = "#FFFFFF";
+
+	function randomize() {
+		let symbols = "0123456789abcdef";
+		let color = "#";
+
+		for (var i = 0; i < 6; i++) {
+			color = color + symbols[Math.floor(Math.random() * 16)];
+		}
+
+		result = color;
+	}
 </script>
 
 <main>
-	<div class="result">
-		<h1>{result}</h1>
-	</div>
+	<Result>
+		<div class="color" style="background-color: {result};" />
+		<p>{result}</p>
+	</Result>
+	<RandomizeButton on:click={randomize} />
 </main>
+
+<style>
+	div {
+		width: 70%;
+		height: 170px;
+		border-radius: 20px;
+		margin-inline: auto;
+	}
+
+	p {
+		margin-bottom: -2rem;
+	}
+</style>

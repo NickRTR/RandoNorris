@@ -25,7 +25,7 @@
 <style>
 	h1 {
 		font-size: 4rem;
-		margin: 0;
+		margin-block: auto;
 	}
 
 	form {

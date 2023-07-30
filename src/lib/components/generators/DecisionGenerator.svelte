@@ -1,9 +1,30 @@
 <script>
-	let result = true;
+	import RandomizeButton from "../RandomizeButton.svelte";
+	import Result from "../Result.svelte";
+
+	let result = "-";
+
+	function randomize() {
+		result = Math.random() < 0.5;
+	}
 </script>
 
 <main>
-	<div class="result">
-		<h1>{result}</h1>
-	</div>
+	<Result>
+		{#if result === true}
+			<img src="/thumbs-up-light.svg" alt="Yes" />
+		{:else if result === false}
+			<img src="/thumbs-down-light.svg" alt="No" />
+		{:else}
+			<h1>-</h1>
+		{/if}
+	</Result>
+	<RandomizeButton on:click={randomize} />
 </main>
+
+<style>
+	h1 {
+		font-size: 4rem;
+		margin: 0;
+	}
+</style>

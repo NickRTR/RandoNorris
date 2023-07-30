@@ -1,10 +1,3 @@
-import { writable } from "svelte/store";
+import { persisted } from "svelte-local-storage-store";
 
-const generators = {
-	number: "number",
-	letter: "letter",
-	color: "color",
-	decision: "decision"
-};
-
-export const generator = writable(generators.number);
+export const generator = persisted("generator", "number");

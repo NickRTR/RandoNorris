@@ -1,4 +1,8 @@
-<div>
+<script>
+	export let active;
+</script>
+
+<div class:active>
 	<slot />
 </div>
 
@@ -11,5 +15,9 @@
 		padding-block: 4rem;
 		margin: auto;
 		text-align: center;
+	}
+
+	.active {
+		background-color: limegreen;
 	}
 </style>

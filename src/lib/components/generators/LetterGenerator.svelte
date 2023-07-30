@@ -32,13 +32,19 @@
 	];
 	let result = "-";
 
+	let active = false;
+
 	function randomize() {
+		active = true;
+		setTimeout(() => {
+			active = false;
+		}, 250);
 		result = letters[Math.floor(Math.random() * letters.length)];
 	}
 </script>
 
 <main>
-	<Result>
+	<Result {active}>
 		<h1>{result}</h1>
 	</Result>
 	<RandomizeButton on:click={randomize} />

@@ -4,13 +4,19 @@
 
 	let result = "-";
 
+	let active = false;
+
 	function randomize() {
+		active = true;
+		setTimeout(() => {
+			active = false;
+		}, 250);
 		result = Math.random() < 0.5;
 	}
 </script>
 
 <main>
-	<Result>
+	<Result {active}>
 		{#if result === true}
 			<img src="/thumbs-up-light.svg" alt="Yes" />
 		{:else if result === false}

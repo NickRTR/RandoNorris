@@ -4,7 +4,13 @@
 
 	let result = "#FFFFFF";
 
+	let active = false;
+
 	function randomize() {
+		active = true;
+		setTimeout(() => {
+			active = false;
+		}, 250);
 		let symbols = "0123456789abcdef";
 		let color = "#";
 
@@ -17,7 +23,7 @@
 </script>
 
 <main>
-	<Result>
+	<Result {active}>
 		<div class="color" style="background-color: {result};" />
 		<p>{result}</p>
 	</Result>

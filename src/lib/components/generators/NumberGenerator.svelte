@@ -6,13 +6,19 @@
 	let end = 10;
 	let result = "-";
 
+	let active = false;
+
 	function randomize() {
+		active = true;
+		setTimeout(() => {
+			active = false;
+		}, 250);
 		result = Math.floor(Math.random() * end) + start;
 	}
 </script>
 
 <main>
-	<Result>
+	<Result {active}>
 		<h1>{result}</h1>
 	</Result>
 	<form>

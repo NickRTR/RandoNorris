@@ -467,6 +467,18 @@
 			"sizes": "1024x1024"
 		}
 	],
+	"screenshots": [
+		{
+			"src": "screenshots/desktop.png",
+			"sizes": "1280x800",
+			"type": "image/png"
+		},
+		{
+			"src": "screenshots/mobile.png",
+			"sizes": "750x1334",
+			"type": "image/png"
+		}
+	],
 	"description": "RandoNorris is a simple but functional randomizer app.",
 	"lang": "en",
 	"categories": ["utility", "games", "productivity"],

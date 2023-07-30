@@ -9,13 +9,19 @@
 
 <style>
 	header {
-		padding: 1rem;
 		margin-inline: auto;
 		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	header img {
+		margin: 0;
+		margin-bottom: -1.5rem;
 	}
 
 	header h1 {
 		font-size: 2.5rem;
+		margin-top: -1rem;
 		margin: 0;
 	}
 

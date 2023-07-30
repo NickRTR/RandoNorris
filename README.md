@@ -1,15 +1,12 @@
 # RandoNorris
 
-Random + Lando Norris
+The app name stems from a combination of random and the F1 Driver Lando Norris.
 
-Randomizer with following functionality:
+## Functionality
 
 - Number Generator
-- Color Generator
-- Decision Generator
 - Letter Generator
-- Country Generator
+- Color Generator
+- Random Decision Generator
 
-- Reaction Meter
-
-Link: https://randonorris.vercel.app/
+https://randonorris.vercel.app/

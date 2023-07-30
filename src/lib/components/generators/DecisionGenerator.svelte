@@ -19,18 +19,25 @@
 	<Result {active}>
 		{#if result === true}
 			<img src="/thumbs-up-light.svg" alt="Yes" />
+			<h1 class="result">Yes</h1>
 		{:else if result === false}
 			<img src="/thumbs-down-light.svg" alt="No" />
+			<h1 class="result">No</h1>
 		{:else}
-			<h1>-</h1>
+			<h1 class="resultText">-</h1>
 		{/if}
 	</Result>
 	<RandomizeButton on:click={randomize} />
 </main>
 
 <style>
-	h1 {
-		font-size: 4rem;
+	img {
+		width: 125px;
+		margin-top: 0.5rem;
+	}
+
+	.result {
+		font-size: 2rem;
 		margin: 0;
 	}
 </style>

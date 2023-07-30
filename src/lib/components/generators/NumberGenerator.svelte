@@ -19,7 +19,7 @@
 
 <main>
 	<Result {active}>
-		<h1>{result}</h1>
+		<h1 class="resultText">{result}</h1>
 	</Result>
 	<form>
 		<input type="number" bind:value={start} placeholder="start" title="start" />
@@ -29,11 +29,6 @@
 </main>
 
 <style>
-	h1 {
-		font-size: 4rem;
-		margin-block: auto;
-	}
-
 	form {
 		margin-top: 2rem;
 		text-align: center;
@@ -42,6 +37,8 @@
 	input {
 		touch-action: manipulation;
 		border-radius: 10px;
+		width: 30%;
+		max-width: 150px;
 		padding: 0.5rem;
 		border: none;
 	}

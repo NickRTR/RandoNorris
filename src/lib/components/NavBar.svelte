@@ -53,7 +53,8 @@
 		width: 3rem;
 		height: 3rem;
 		border: none;
-		font-size: 2rem;
+		font-size: 1.5rem;
+		padding: 0;
 		color: black;
 		text-align: center;
 	}

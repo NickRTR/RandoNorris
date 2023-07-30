@@ -27,4 +27,11 @@
 		outline: none;
 		border-radius: 5px;
 	}
+
+	:global(.resultText) {
+		font-size: 4.3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 </style>

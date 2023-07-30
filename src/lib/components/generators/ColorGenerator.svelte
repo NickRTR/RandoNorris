@@ -32,13 +32,15 @@
 
 <style>
 	div {
-		width: 70%;
-		height: 170px;
+		width: 50%;
+		height: 125px;
 		border-radius: 20px;
 		margin-inline: auto;
+		margin-top: 1.5rem;
 	}
 
 	p {
-		margin-bottom: -2rem;
+		margin-top: 0.7rem;
+		margin-bottom: 0;
 	}
 </style>

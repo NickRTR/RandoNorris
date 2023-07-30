@@ -12,12 +12,12 @@
 		border-radius: 10px;
 		width: 90%;
 		max-width: 400px;
-		padding-block: 4rem;
+		height: 200px;
 		margin: auto;
 		text-align: center;
 	}
 
 	.active {
-		background-color: limegreen;
+		background-color: rgb(0, 255, 0);
 	}
 </style>

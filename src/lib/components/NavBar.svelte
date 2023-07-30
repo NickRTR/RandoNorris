@@ -42,6 +42,7 @@
 		display: flex;
 		justify-content: space-between;
 		width: 55%;
+		max-width: 250px;
 
 		border: 3px solid white;
 		border-radius: 10px;
@@ -53,6 +54,8 @@
 		height: 3rem;
 		border: none;
 		font-size: 2rem;
+		color: black;
+		text-align: center;
 	}
 
 	.active {

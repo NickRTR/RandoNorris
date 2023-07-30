@@ -19,10 +19,6 @@
 		margin: 0;
 	}
 
-	header img {
-		margin-right: 1rem;
-	}
-
 	header h1::first-letter {
 		text-transform: capitalize;
 	}

@@ -3,7 +3,7 @@
 </script>
 
 <header>
-	<img src="/logo.png" alt="" />
+	<img src="/favicon.svg" alt="" />
 	<h1>{$generator}</h1>
 </header>
 

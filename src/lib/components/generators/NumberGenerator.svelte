@@ -1,4 +1,6 @@
 <script>
+	import autoselect from "svelte-autoselect";
+
 	import RandomizeButton from "../RandomizeButton.svelte";
 	import Result from "../Result.svelte";
 
@@ -22,8 +24,8 @@
 		<h1>{result}</h1>
 	</Result>
 	<form>
-		<input type="number" bind:value={start} placeholder="start" title="start" />
-		<input type="number" bind:value={end} placeholder="end" title="end" />
+		<input type="number" use:autoselect bind:value={start} placeholder="start" title="start" />
+		<input type="number" use:autoselect bind:value={end} placeholder="end" title="end" />
 	</form>
 	<RandomizeButton on:click={randomize} />
 </main>

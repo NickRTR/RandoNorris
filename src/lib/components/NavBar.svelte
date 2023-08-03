@@ -18,18 +18,25 @@
 		title="Letter">L</button
 	>
 	<button
-		class:active={$generator === "color"}
-		on:click={() => {
-			$generator = "color";
-		}}
-		title="Color">C</button
-	>
-	<button
 		class:active={$generator === "decision"}
 		on:click={() => {
 			$generator = "decision";
 		}}
 		title="Decision">D</button
+	>
+	<button
+		class:active={$generator === "switch"}
+		on:click={() => {
+			$generator = "switch";
+		}}
+		title="Switch">S</button
+	>
+	<button
+		class:active={$generator === "color"}
+		on:click={() => {
+			$generator = "color";
+		}}
+		title="Color">C</button
 	>
 </nav>
 
@@ -41,8 +48,7 @@
 		transform: translateX(-50%);
 		display: flex;
 		justify-content: space-between;
-		width: 55%;
-		max-width: 250px;
+		width: 275px;
 
 		border: 3px solid white;
 		border-radius: 10px;

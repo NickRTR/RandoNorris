@@ -5,6 +5,7 @@
 	import LetterGenerator from "$lib/components/generators/LetterGenerator.svelte";
 	import ColorGenerator from "$lib/components/generators/ColorGenerator.svelte";
 	import DecisionGenerator from "$lib/components/generators/DecisionGenerator.svelte";
+	import SwitchGenerator from "$lib/components/generators/SwitchGenerator.svelte";
 </script>
 
 <main>
@@ -16,5 +17,7 @@
 		<ColorGenerator />
 	{:else if $generator === "decision"}
 		<DecisionGenerator />
+	{:else if $generator === "switch"}
+		<SwitchGenerator />
 	{/if}
 </main>

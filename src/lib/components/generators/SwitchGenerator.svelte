@@ -22,7 +22,7 @@
 		}
 	}
 
-	let options = ["Yes", "No", "Maybe", "asdfasdfasdflkjasdfkljasödef"];
+	let options = ["Yes", "No", "Maybe"];
 	let result = "-";
 
 	let active = false;

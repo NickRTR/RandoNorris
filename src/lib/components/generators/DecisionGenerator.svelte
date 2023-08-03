@@ -24,7 +24,7 @@
 			<img src="/thumbs-down-light.svg" alt="No" />
 			<h1 class="result">No</h1>
 		{:else}
-			<h1 class="resultText">-</h1>
+			<h1>-</h1>
 		{/if}
 	</Result>
 	<RandomizeButton on:click={randomize} />

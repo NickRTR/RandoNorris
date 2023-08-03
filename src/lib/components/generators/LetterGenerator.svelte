@@ -45,7 +45,7 @@
 
 <main>
 	<Result {active}>
-		<h1 class="resultText">{result}</h1>
+		<h1>{result}</h1>
 	</Result>
 	<RandomizeButton on:click={randomize} />
 </main>

@@ -1,43 +1,18 @@
 <script>
 	import { generator } from "$lib/stores";
+	import { generators } from "$lib/generators";
 </script>
 
 <nav>
-	<button
-		class:active={$generator === "number"}
-		on:click={() => {
-			$generator = "number";
-		}}
-		title="Number">N</button
-	>
-	<button
-		class:active={$generator === "letter"}
-		on:click={() => {
-			$generator = "letter";
-		}}
-		title="Letter">L</button
-	>
-	<button
-		class:active={$generator === "decision"}
-		on:click={() => {
-			$generator = "decision";
-		}}
-		title="Decision">D</button
-	>
-	<button
-		class:active={$generator === "switch"}
-		on:click={() => {
-			$generator = "switch";
-		}}
-		title="Switch">S</button
-	>
-	<button
-		class:active={$generator === "color"}
-		on:click={() => {
-			$generator = "color";
-		}}
-		title="Color">C</button
-	>
+	{#each generators as g}
+		<button
+			class:active={$generator === g.name}
+			on:click={() => {
+				$generator = g.name;
+			}}
+			title={g.title}>{g.short}</button
+		>
+	{/each}
 </nav>
 
 <style>

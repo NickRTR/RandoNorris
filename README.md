@@ -4,10 +4,11 @@ The app name stems from a combination of random and the F1 Driver Lando Norris.
 
 ## Functionality
 
-- Number Generator
-- Letter Generator
-- Color Generator
+- Random Number Generator
+- Random Letter Generator
 - Random Decision Generator
+- Random Selection
+- Color Generator
 
 ## Screenshot
 

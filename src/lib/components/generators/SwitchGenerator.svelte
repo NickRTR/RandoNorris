@@ -15,7 +15,7 @@
 		const minFontSize = 20;
 		const scaleFactor = 1.3;
 
-		if (charactersCount > 15) {
+		if (charactersCount > 6) {
 			fontSize = Math.max(baseFontSize - charactersCount * scaleFactor, minFontSize);
 		} else {
 			fontSize = 64;

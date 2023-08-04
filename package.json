@@ -20,6 +20,7 @@
 	"type": "module",
 	"dependencies": {
 		"svelte-autoselect": "^0.2.0",
+		"svelte-french-toast": "^1.2.0",
 		"svelte-local-storage-store": "^0.5.0",
 		"svelte-tags-input": "^5.0.0"
 	}

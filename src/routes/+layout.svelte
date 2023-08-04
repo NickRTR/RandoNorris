@@ -1,9 +1,12 @@
 <script>
 	import NavBar from "$lib/components/NavBar.svelte";
 	import Header from "../lib/components/Header.svelte";
+	import { Toaster } from "svelte-french-toast";
 </script>
 
 <body>
+	<Toaster />
+
 	<Header />
 	<main>
 		<slot />

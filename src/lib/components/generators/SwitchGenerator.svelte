@@ -3,6 +3,7 @@
 	import Tags from "svelte-tags-input";
 	import Result from "../Result.svelte";
 	import { afterUpdate } from "svelte";
+	import toast from "svelte-french-toast";
 
 	let fontSize = 64;
 	let heading;
@@ -32,7 +33,14 @@
 		setTimeout(() => {
 			active = false;
 		}, 250);
-		result = options[Math.floor(Math.random() * options.length)];
+		if (options.length === 0) {
+			result = "-";
+			toast("Please add options in the input field down below.", {
+				icon: "🚨"
+			});
+		} else {
+			result = options[Math.floor(Math.random() * options.length)];
+		}
 	}
 </script>
 

@@ -95,12 +95,14 @@
 		width: 93%;
 		max-width: 400px;
 		margin-inline: auto;
+		margin-bottom: -1rem;
 	}
 
 	.presets {
 		display: flex;
 		gap: 0.5rem;
 		justify-content: space-between;
+		margin-top: -1rem;
 		margin-bottom: 1rem;
 	}
 
@@ -118,6 +120,7 @@
 		border-radius: 0.25rem;
 		border: none;
 		padding: 0.15rem;
+		color: black;
 	}
 
 	.presetselection button {

@@ -26,6 +26,7 @@
 	}
 
 	:global(button) {
+		color: black;
 		background-color: white;
 		outline: none;
 		border-radius: 5px;

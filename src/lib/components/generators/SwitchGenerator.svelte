@@ -48,7 +48,7 @@
 
 	function saveOptions() {
 		$presets[selectedPreset] = options;
-		toast.success("Saved Options to Preset " + (selectedPreset + 1) + "!", {});
+		toast.success("Saved current options to Preset " + (selectedPreset + 1) + "!", {});
 	}
 </script>
 

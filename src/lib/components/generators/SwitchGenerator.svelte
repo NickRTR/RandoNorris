@@ -25,6 +25,7 @@
 	}
 
 	let options = ["Yes", "No", "Maybe"];
+
 	let result = "-";
 
 	let selectedPreset = 0;
@@ -47,8 +48,9 @@
 	}
 
 	function saveOptions() {
-		$presets[selectedPreset] = options;
-		toast.success("Saved current options to Preset " + (selectedPreset + 1) + "!", {});
+		const updatedOptions = [...options];
+		$presets[selectedPreset] = updatedOptions;
+		toast.success("Saved current options to Preset " + (selectedPreset + 1) + "!");
 	}
 </script>
 
@@ -58,7 +60,7 @@
 			{result}
 		</p>
 	</Result>
-	<form>
+	<div class="form">
 		<div class="presets">
 			{#each $presets as preset, id}
 				<button
@@ -78,18 +80,18 @@
 		/>
 		<div class="presetselection">
 			<button on:click={saveOptions}>Save to Preset</button>
-			<select name="presetnr" id="presetnr" bind:value={selectedPreset}>
+			<select bind:value={selectedPreset}>
 				{#each $presets as _, id}
 					<option value={id}>{id + 1}</option>
 				{/each}
 			</select>
 		</div>
-	</form>
+	</div>
 	<RandomizeButton on:click={randomize} />
 </main>
 
 <style>
-	form {
+	.form {
 		margin-top: 2rem;
 		text-align: center;
 		width: 93%;

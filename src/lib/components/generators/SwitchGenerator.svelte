@@ -4,6 +4,7 @@
 	import Result from "../Result.svelte";
 	import { afterUpdate } from "svelte";
 	import toast from "svelte-french-toast";
+	import { presets } from "$lib/stores";
 
 	let fontSize = 64;
 	let heading;
@@ -26,6 +27,8 @@
 	let options = ["Yes", "No", "Maybe"];
 	let result = "-";
 
+	let selectedPreset = 0;
+
 	let active = false;
 
 	function randomize() {
@@ -35,12 +38,17 @@
 		}, 250);
 		if (options.length === 0) {
 			result = "-";
-			toast("Please add options in the input field down below.", {
+			toast("Please add one or more options in the input field down below.", {
 				icon: "🚨"
 			});
 		} else {
 			result = options[Math.floor(Math.random() * options.length)];
 		}
+	}
+
+	function saveOptions() {
+		$presets[selectedPreset] = options;
+		toast.success("Saved Options to Preset " + (selectedPreset + 1) + "!", {});
 	}
 </script>
 
@@ -51,12 +59,31 @@
 		</p>
 	</Result>
 	<form>
+		<div class="presets">
+			{#each $presets as preset, id}
+				<button
+					on:click={() => {
+						options = preset;
+					}}
+				>
+					- {id + 1} -
+				</button>
+			{/each}
+		</div>
 		<Tags
 			bind:tags={options}
 			addKeys={[13, 9, 188, 32]}
 			onlyUnique={true}
 			placeholder={"Add options"}
 		/>
+		<div class="presetselection">
+			<button on:click={saveOptions}>Save to Preset</button>
+			<select name="presetnr" id="presetnr" bind:value={selectedPreset}>
+				{#each $presets as _, id}
+					<option value={id}>{id + 1}</option>
+				{/each}
+			</select>
+		</div>
 	</form>
 	<RandomizeButton on:click={randomize} />
 </main>
@@ -65,12 +92,37 @@
 	form {
 		margin-top: 2rem;
 		text-align: center;
-	}
-
-	form {
 		width: 93%;
 		max-width: 400px;
 		margin-inline: auto;
+	}
+
+	.presets {
+		display: flex;
+		gap: 0.5rem;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+	}
+
+	.presets button {
+		width: 100%;
+		border: none;
+		padding: 0.2rem;
+	}
+
+	.presetselection {
+		margin-top: 0.5rem;
+	}
+
+	select {
+		border-radius: 0.25rem;
+		border: none;
+		padding: 0.15rem;
+	}
+
+	.presetselection button {
+		border: none;
+		padding: 0.2rem;
 	}
 
 	p {
